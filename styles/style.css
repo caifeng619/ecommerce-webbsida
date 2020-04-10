@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,Helvetica,sans-serif;
+}
+/* ------ styles for navbar -------*/
+nav{
+    background: #35393C;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    padding: 0 2rem;
+    font-size: 1.3rem;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-links, .nav-links{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    margin-bottom: 0;
+}
+.logo{
+    flex: 1;
+    color: #477998;
+}
+.nav-links{
+    flex: 2;
+    justify-content: space-around;
+}
+.customer-links{
+    font-size: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.customer-links li{
+    margin-left: 1rem;
+}
+
+.customer-links li a,
+.nav-links li a{
+    text-decoration: none;
+    color: silver;
+}
+.customer-links li a:hover,
+.nav-links li a:hover{
+    text-decoration: none;
+    color: rgb(224, 205, 205);
+}
+
+/* Popup container*/
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: silver;
+}
+
+/* The actual popup */
+.popup .popup-cart {
+    visibility: hidden;
+    width: 30rem;
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 4px 0;
+    position: absolute;
+    z-index: 1;
+    top: 140%;
+    right: 0;
+}
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+}
+.popup h2{
+    text-align: center;
+}
+.num{
+    background: chocolate;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    color:white;
+    top: -15px;
+    right: -15px;
+    
+}
+
+/* styles for products section  */
+.products-section{
+    max-width: 1400px;
+    margin: .5rem auto;
+    text-align: center;
+}
+.products{
+    margin: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
+}
+
+/* styles for login and signup form */
+.form-container{
+    width: 20rem;
+    border: 1px solid silver;
+    margin: 2rem auto;
+}
+.login, .signup{
+    width: 15rem;
+    margin: 2rem auto;
+}
+.form-container input{
+    margin-top: 1rem;
+    padding: .2rem .5rem;
+}
+.btn-signin{
+    width: 13.5rem;
+    border: none;
+    background: #477998;
+}
+.btn-signup{
+    width: 13.5rem;
+    margin: auto;
+    text-decoration: none;
+    color: silver;
+}
+.btn-signup:hover{
+    color: #35393C;
+}
+
+/* ------ styles for search form -------*/
+.search-form{
+    width: 50%;
+    margin: 1rem auto 2rem;
+    display: flex;
+}
+.search-form input{
+    width: 100%;
+    border: 1px solid silver;
+}
+.search-form button{
+    height: 2rem;
+    width: 2rem;
+    margin: .5rem 0;
+    border: none;
+    border-radius: 5px;
+}
+.search-title{
+    text-align: center;
+}
+
+/* styles for sort section */
+.sort-section a{
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+.sort-section a:hover{
+    color: silver;
+}
+/* styles to cart item */
+.cart-item{
+    display: grid;
+    grid-template-columns: 3fr 2fr .5fr .2fr .5fr;
+    grid-column-gap:.3rem;
+    padding: .5rem;
+    margin: .5rem auto;
+}
+
+.btn-checkout{
+    background: #35393C;
+    color: silver;
+    border: none;
+    padding: .2rem 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+.cart-item input{
+    font-size: 1rem;
+    background: #35393C;
+    color: silver;
+    border: none;
+    padding: 3px 1px;
+    border-radius: 5px;
+}
+.cart-bottom{
+    text-align: end;
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.thank{
+    text-align: center;
+    height: 40vh;
+    margin-top: 30vh;
+}
+
+
+/*------ styles for footer ------*/
+footer{
+    background: #35393C;
+}
+footer hr{
+    background-color: white;
+}
+.footer-container{
+    margin: 0 4rem;
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-gap:2rem;
+}
+h4{
+    color: #477998;
+}
+.Links a{
+     text-decoration: none;
+     color: white;
+}
+.Links a:hover{
+    color: silver;
+}
+.footer-right{
+    text-align: right;
+    color: white;
+}         
+.icons{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1rem;
+}
+.icons>a{
+    background:white;
+    color:#35393C;
+    padding-top: .5rem;
+    margin-left: 1rem;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+footer ul{
+    margin-top: 1.5rem;
+    list-style: none;
+}
+footer ul li{
+    margin-top: .5rem;
+    cursor: pointer;
+    color:white;
+}
+footer ul li:hover{
+    color:rgb(196, 194, 194);
+}
+.copyright p{
+       color: white;
+       text-align: center;
+       margin-bottom: 0;
+}
+
+/*------ break point ------*/
+
+/*------ break point for navbar------*/
+@media only screen and (max-width:786px){
+    .nav-links{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        background: linear-gradient(to right, #74ebd5, #acb6e5);
+        height: 100%;
+        width: 100%;
+        clip-path: circle(100px at 90% -30%);
+        -webkit-clip-path:circle(100px at 90% -30%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links li a{
+        color: white;
+    }
+    .hamburger{
+        visibility: visible;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .open{
+        clip-path: circle(1300px at 90% -20%);
+        -webkit-clip-path:circle(1300px at 90% -20%);
+        pointer-events: all;
+    }
+    .username{
+        z-index: 4;
+    }
+}
+/*------ break point for footer------*/
+@media only screen and (max-width:786px){
+    
+    footer .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-right{
+        text-align: left;          
+    }
+    .icons{
+    justify-content: flex-start;
+    }
+    .icons>a{
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+    
+}
+@media only screen and (max-width:694px){
+    footer .footer-container{
+        grid-template-columns: 1fr;
+    }
+}
+

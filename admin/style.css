@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial,Helvetica,sans-serif;
+}
+/* ------ styles for navbar -------*/
+.banner{
+    text-align: center;
+    background-color: #35393C;
+    color: white;
+    height: 3rem;
+}
+.nav-links{
+    display:flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    margin: 2rem 1rem 1rem 0;
+}
+.product-list{
+    margin: 2rem 5rem;
+}
+
+/* styles for login and signup form */
+.form-container{
+    width: 20rem;
+    border: 1px solid silver;
+    margin: 2rem auto;
+}
+.login, .signup{
+    width: 15rem;
+    margin: 2rem auto;
+}
+.form-container input{
+    margin-top: 1rem;
+    padding: .2rem .5rem;
+}
+.btn-signin{
+    width: 13.5rem;
+    border: none;
+    background: #477998;
+}
+.error{
+    text-align: center;
+    color: red;
+    margin-top: 2rem;
+}
+a{
+    text-decoration: none;
+    background-color: teal;
+    padding: .5rem 1rem;
+    color: white;
+    
+    text-align: center;
+}
+a:hover{
+    color: white;
+    background-color: rgb(18, 145, 145);
+}
